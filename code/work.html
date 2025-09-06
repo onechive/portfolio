@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graphic Designer Juwon</title>
+
+  <!-- Tailwind 불러오기 -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CSS 연결 -->
+  <link rel="stylesheet" href="STYLE.css">
+
+  <!-- 구글 폰트 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Gothic+A1&family=Nanum+Gothic&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">  
+
+</head>
+
+<body>
+
+<div id="wrap">
+
+  <header>
+    <!-- <h1><a href="index.html">ㅈㅜㅇㅜㅓㄴ</a></h1> -->
+    <ul>
+      <li><a href="index.html"><span class="number">( 01 )</span><br><span class="text">INTRODUCE</span></a></li>
+      <li><a href="work.html"><span class="number">( 02 )</span><br><span class="text">WORK</span></a></li>
+      <li><a href="Comment.html"><span class="number">( 03 )</span><br><span class="text">COMMENTS</span></a></li>
+    </ul>
+  </header>
+
+
+  <div id="container" style="margin-top: 100px;">
+    
+    
+
+    <!-- 현재 선택된 연도 -->
+    <h1 id="current-year">2025</h1>
+
+
+
+
+
+
+
+    <div class="year-selector" style="text-align: center; position: relative; z-index: 100;">
+      <button class="glass-button" id="year-toggle">Browse by Year</button>
+      <ul class="year-dropdown" id="year-list">
+        <li>2020-2022</li>
+        <li>2023</li>
+        <li>2024</li>
+        <li>2025</li>
+      </ul>
+    </div>
+    
+
+    <!-- 작품 썸네일 갤러리 -->
+    <div class="gallery" id="gallery"></div>
+
+  </div>
+
+
+  <footer>
+    <section class="footer">
+      <p>&copy;ONE</p>
+      <ul class="sns">
+        <li class="inst"><a href="#" target="_blank">inst</a></li>
+        <li class="youtube"><a href="#" target="_blank">youtube</a></li>
+      </ul>
+    </section>
+  </footer>
+
+  <div id="square"></div>
+</div>
+
+<script>
+const projectData = {
+
+
+
+
+
+
+
+  2025: [
+    { id: "Tanzania", genre: "Logo / Motion", img: "../Img/2025_Tanzania_Main.png" },
+    { id: "OurWeddingDay", genre: "Motion Graphics", img: "../Img/2025_WD_MAIN.png" },
+    { id: "Earth", genre: "3D Motion", img: "../Img/2025_KW_3D_1_MAIN.png" },
+    { id: "Oops", genre: "3D / AR", img: "../Img/2025_KW_3D_2_MAIN.png" },
+    { id: "Icebergs", genre: "3D Interaction", img: "../Img/2025_KW_CD_MAIN.png" },
+    { id: "Typography", genre: "Typography Design", img: "../Img/2025_KW_VC_MAIN.png" },
+    { id: "ImmersiveDesign", genre: "Projection Mapping", img: "../Img/2025_KW_ID_MAIN.jpg" },
+  ],
+
+
+
+
+
+
+
+  
+  2020: [
+    { id: "Tracing", genre: "Tracing", img: "../Img/2020_Tracing_Image7.png" },
+  ],
+
+
+
+
+
+
+
+
+  2021: [
+    { id: "BellLogo", genre: "Logo", img: "../Img/2021_Bell_Logo_MAIN.png" },
+  ],
+
+
+
+
+
+
+
+
+  2022: [
+    { id: "KKONG", genre: "Animation", img: "../Img/2022_KKONG_MAIN.png" },
+    { id: "SUPERSTARBELL", genre: "Illustrator", img: "../Img/2022_SUPERSTARBELL_MAIN.png", },
+    { id: "Young", genre: "Animation", img: "../Img/2022_Young_cafe_MAIN.png", },
+
+  ],
+
+
+
+
+
+
+
+
+  2023: [
+    { id: "Playgrounds", genre: "Illustrator", img: "../Img/2023_0630_MAIN.png" },
+    { id: "Utopia", genre: "3D Poster", img: "../Img/2023_0802_Utopia_MAIN.mp4" },
+    { id: "ReHeart", genre: "3D Poster", img: "../Img/2023_0831_ReHeart_MAIN.png" },
+    { id: "Cohesion", genre: "3D Poster", img: "../Img/2023_0904_cohesion_MAIN.png" },
+    { id: "WaterBubbles", genre: "3D", img: "../Img/2023_0831_WaterBubbles_MAIN.mp4" },
+    { id: "Island", genre: "Book", img: "../Img/2023_Island_MAIN.png" },
+    { id: "Moon", genre: "3D Motion", img: "../Img/2023_Moon_MAIN.png" },
+    { id: "Crumble", genre: "Branding", img: "../Img/2023_Crumble_MAIN.png" },
+    { id: "FeelingGood", genre: "3D Motion", img: "../Img/2023_0904_FeelingGood_MAIN.png" },
+    { id: "CARD", genre: "Postcard", img: "../Img/2023_Card1.jpg" },
+    { id: "Photo", genre: "Illustrator", img: "../Img/2023_photo_MAIN.jpg" },
+    { id: "Ring", genre: "3D Motion", img: "../Img/2023_0807_Image.png" },
+    { id: "Dilemma", genre: "3D Motion", img: "../Img/2023_0817_Image.png" },
+    { id: "Mongolia", genre: "Postcard", img: "../Img/2023_Mongolia_MAIN.jpg" },
+    { id: "HGU", genre: "Logo", img: "../Img/2023_HGU_Logo_MAIN.png" },
+    { id: "Hongik", genre: "Postcard", img: "../Img/2023_hongik_MAIN.png" },
+    { id: "aespa", genre: "3D", img: "../Img/2023_aespa_Image.png" },
+    { id: "IsraelVisionTrip", genre: "Logo", img: "../Img/2023_IsraelVisionTrip_MAIN.png" },
+    
+  ],
+
+
+
+
+
+
+
+
+  2024: [
+    { id: "logo2024", genre: "Logo", img: "../Img/2024_Lily_Logo_Main.jpg" },
+    { id: "Animals", genre: "Content Design", img: "../Img/2024_KW_CD_1_MAIN.png" },
+    { id: "HYUKOH", genre: "Unity", img: "../img/2024_KW_UD_1_MAIN.png" },
+    { id: "VR2024", genre: "360 VR", img: "../Img/2024_KW_VR_MAIN.jpg" },
+    { id: "XR2024", genre: "XR", img: "../Img/2024_KW_XR_MAIN.png" },
+    { id: "HappinessIndex", genre: "Content Design", img: "../Img/2024_KW_CD_MAIN.png" },
+    { id: "WhatILike", genre: "Content Design", img: "../Img/2024_KW_CD_2_MAIN.png" },
+    { id: "motion2024", genre: "3D Motion", img: "../Img/2024_KW_3D_MAIN.png" },
+    { id: "web2024", genre: "Website", img: "../Img/2024_KW_WS_MAIN.png" },
+    { id: "KIRSH", genre: "Character", img: "../Img/2024_KIRSH_MAIN.jpg" },
+    { id: "FLOS", genre: "Motion Graphics", img: "../Img/2024_KW_Plan_MAIN.png" },
+    { id: "IM", genre: "Projection mapping / p5.js", img: "../Img/2024_IM_MAIN.png" },
+  ],
+  
+
+
+
+
+
+
+
+
+};
+
+
+
+
+// 연도별 갤러리 데이터 (예시는 너가 가진 projectData 변수 그대로 사용)
+
+
+
+
+
+// DOM 요소
+const gallery = document.getElementById("gallery");
+const yearItems = document.querySelectorAll("#year-list li");
+const yearTitle = document.getElementById("current-year");
+
+
+
+
+
+// URL에서 year 파라미터 읽기
+const urlParams = new URLSearchParams(window.location.search);
+const initialYear = urlParams.get('year') || '2025';
+
+
+
+
+
+// 갤러리 렌더링 함수
+function renderGallery(yearKey) {
+  gallery.innerHTML = "";
+
+  const projects = projectData[yearKey];
+  if (!projects) return;
+
+  projects.forEach((item) => {
+    const box = document.createElement("div");
+    box.classList.add("work-box");
+
+    box.innerHTML = `
+      <a href="work-detail.html?id=${item.id}&year=${yearKey}">
+        <span class="genre-tag">${item.genre}</span>
+        <img src="${item.img}" alt="${item.genre}" class="thumbnail">
+      </a>
+    `;
+    gallery.appendChild(box);
+  });
+}
+
+
+
+
+
+// 2020-2022 클릭 시 사용할 병합 키 준비
+function ensureMergedData() {
+  if (!projectData["2020-2022"]) {
+    projectData["2020-2022"] = [
+      ...(projectData[2020] || []),
+      ...(projectData[2021] || []),
+      ...(projectData[2022] || [])
+    ];
+  }
+}
+
+
+
+
+
+
+// 초기 렌더링
+if (initialYear === "2020-2022") {
+  ensureMergedData();
+}
+yearTitle.textContent = initialYear;
+renderGallery(initialYear);
+
+
+
+
+
+
+// 드롭다운 열기/닫기
+document.getElementById('year-toggle').addEventListener('click', () => {
+  document.getElementById('year-list').classList.toggle('show');
+});
+
+
+
+
+// 연도 클릭 시 뜨는
+yearItems.forEach((item) => {
+  item.addEventListener('click', () => {
+    const selectedYear = item.textContent.trim();
+
+    if (selectedYear === "2020-2022") {
+      ensureMergedData();
+    }
+
+    yearTitle.textContent = selectedYear;
+    renderGallery(selectedYear);
+    document.getElementById('year-list').classList.remove('show');
+  });
+});
+
+
+
+// work-detail 페이지에서 돌아가기 위한 링크 설정
+const params = new URLSearchParams(window.location.search);
+const year = params.get('year') || '2025';
+const backLink = document.querySelector('.WorkSide-back-link');
+if (backLink) {
+  backLink.href = `work.html?year=${year}`;
+}
+
+
+
+
+</script>
+
+
+</body>
+</html>

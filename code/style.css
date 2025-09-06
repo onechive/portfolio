@@ -1,0 +1,674 @@
+/* == Reset == */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* == 전체 레이아웃 & 초기 화면 중앙 정렬 == */
+html, body {
+    background: black;
+    overflow-x: hidden;
+    height: 100%;
+    color: #ffffff;
+}
+
+#wrap {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#logo-container {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    z-index: 1001;
+}
+
+#logo-container img {
+    width: 100px;
+    height: auto;
+}
+
+/* == 헤더 == */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+header ul {
+    display: flex;
+    gap: 24px;
+}
+
+header ul li a {
+    color: #ffffff;
+    text-align: center;
+    margin: 20px;
+    display: block;
+}
+
+header ul li a .number {
+    font-family: "Dancing Script", cursive;
+    font-style: italic;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+header ul li a .text {
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+header li a {
+    display: inline-block;
+    padding: 8px 16px;
+    color: #f9f1d9;
+    text-decoration: none;
+    border-radius: 999px;
+    transition: all 0.3s ease;
+}
+
+header li a:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 999px;
+    box-shadow: 0 0 16px rgba(255, 255, 255, 0.9);
+}
+
+
+
+
+
+
+
+#container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    padding-top: 80px; 
+}
+
+.main-content-block {
+    text-align: center;
+    margin-top: 200px; /* 이미지 위치 조절 */
+}
+
+
+.main-logo-container {
+    width: 70%;
+    max-width: 900px; /* 이미지 크기 조절 */
+    margin: 0 auto 20px auto;
+}
+
+.main-logo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.intro-image-container {
+    position: relative;
+    width: 600px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.intro-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.animated-text-wrapper {
+    position: relative;
+    height: 1.2em;
+    overflow: hidden;
+    width: 250px;
+    text-align: center;
+    margin-top: -50px; /* 모션 위치 조절 */
+}
+
+.animated-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+
+
+
+
+
+
+
+/* 스크롤 애니메이션 효과를 위한 CSS */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 300px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.profile h1 { /* BREAKING THE~ */
+    font-size: 250px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.profile h3 { /* 장르의 경계를 허물고 */
+    font-size: 24px;
+    font-family: "Gothic A1", sans-serif;
+    font-weight: 100;
+}
+
+.headline {
+    margin: 100px 0;
+    text-align: center;
+}
+
+.headline-row { /* THE GENRE AND ~ */
+    display: flex;
+    justify-content: space-between; /* 양쪽 끝으로 정렬 */
+    align-items: center;
+    font-size: 180px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    line-height: 1.1;
+    width: 100%; /* 너비를 100%로 설정하여 양쪽 끝으로 벌어지도록 함 */
+}
+
+.headline-row .left {
+    text-align: left;
+}
+
+.headline-row .center {
+    text-align: center;
+}
+
+.headline-row .right {
+    text-align: right;
+}
+
+.headline-row .spacer {
+    flex-grow: 1; /* 남는 공간을 모두 차지하도록 설정 */
+    height: 1px;
+}
+
+.headline-note {
+    text-align: center;
+    margin-top: -90px; /* 영어, 한글 간격 조절 */
+    margin-bottom: 200px;
+}
+
+.headline-note h3 { /* 상상을 현실로 만드는 */
+    font-size: 24px;
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 400;
+}
+
+/* 화면 너비에 따라 폰트 크기 변경 */
+/* 1200px 이하일 때 */
+@media screen and (max-width: 1200px) {
+    .profile h1 {
+        font-size: 120px;
+    }
+    .headline-row {
+        font-size: 100px;
+    }
+}
+
+/* 768px 이하일 때 */
+@media screen and (max-width: 768px) {
+    .profile h1 {
+        font-size: 80px;
+    }
+    .profile h3 {
+        font-size: 20px;
+    }
+    .headline-row {
+        font-size: 60px;
+        flex-direction: column;
+    }
+    .headline-row .left,
+    .headline-row .center,
+    .headline-row .right {
+        text-align: center;
+        width: 100%;
+    }
+    .headline-row .spacer {
+        display: none;
+    }
+    .headline-note h3 {
+        font-size: 20px;
+    }
+}
+
+
+
+/* ----- WORK.html -----*/
+#work-container {
+  margin-top: 120px; /* 헤더 높이보다 여유있게 */
+}
+
+
+.year-selector {
+  text-align: center;
+  position: relative;
+  z-index: 100;
+  margin-bottom: 40px;
+}
+
+/* 🔵 완전 둥근 유리 느낌 버튼 */
+.glass-button {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px; /*  완전 둥글게 */
+  padding: 10px 24px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: white; 
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.glass-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* 드롭다운은 위치 그대로 유지 */
+.year-dropdown {
+  list-style: none;
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  overflow: hidden;
+  display: none;
+  z-index: 200;
+  min-width: 160px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#current-year {
+  font-size: 80px;
+  text-align: center;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  margin: 40px 0 20px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+.year-dropdown {
+  list-style: none;
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  overflow: hidden;
+  display: none;
+  z-index: 200;
+  min-width: 160px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.year-dropdown li {
+  font-family: 'Roboto', serif;
+  font-weight: 200;
+  padding: 10px 15px;
+  cursor: pointer;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  color: #000000;
+}
+
+.year-dropdown li:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+.year-dropdown.show {
+  display: block;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3열 고정 */
+  gap: 24px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.work-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2 / 1; /* 비율: 가로 2, 세로 1 */
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.work-box:hover {
+  transform: scale(1.03);
+}
+
+.genre-tag {
+  position: absolute;
+  font-family: 'Roboto', serif;
+  top: 12px;
+  left: 12px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  opacity: 0.8;
+  z-index: 2;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.work-box:hover .thumbnail {
+  transform: scale(1.05);
+}
+
+/* 반응 화면 작아지면 열 개수 줄이기 */
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* --- WorkSide.html --*/
+.detail-wrapper {
+  display: flex;
+  gap: 40px;
+  padding: 60px;
+  min-height: 100vh;
+  background-color: rgb(0, 0, 0);   /* 혹시 오버라이딩 안 되면 이 줄도 추가 */
+}
+
+.detail-text h1,
+.detail-text h3,
+.description {
+  color: #ffffff; 
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+.back-link {
+  color: white;       
+  font-family: 'Arial', sans-serif; 
+  text-decoration: none; 
+  background-color: transparent; 
+  padding: 5px 10px; 
+  border-radius: 4px; 
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: #ccc; /* 마우스 올리면 연한 회색으로 변하게 */
+  cursor: pointer;
+}
+
+
+h1, h2, h3 {
+  font-weight: 300;
+}
+
+
+/* Body, 기본 텍스트 색상 및 폰트 */
+/* 전체 배경 및 폰트 설정 */
+.WorkSide-body {
+  background-color: #000000; 
+  color: #ffffff;
+  font-family: 'Gothic A1', serif;
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 헤더 영역 */
+.WorkSide-header {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.WorkSide-logo {
+  font-size: 2.5rem;
+  color: #fff;
+  margin: 0;
+}
+
+/* 메인 콘텐츠 */
+.WorkSide-main {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem 3rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 뒤로가기 링크 */
+.WorkSide-back-link {
+  display: inline-block;
+  font-family: Roboto;
+  font-weight: 200;
+  font-size: 15px;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+  transition: color 0.3s ease;
+}
+.WorkSide-back-link:hover {
+  color: #facc15;
+}
+
+/* 콘텐츠 구성 */
+.WorkSide-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+
+
+
+
+
+@media (min-width: 768px){
+  .WorkSide-detail {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .WorkSide-text {
+    flex: 1;
+    max-width: 48%;
+  }
+
+
+
+
+
+
+/* 텍스트 부분 */
+.WorkSide-title {
+  font-family: 'Roboto', serif;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.WorkSide-subtitle {
+  color: #ffffff;
+  font-family: 'Roboto', serif;
+  font-size: 15px;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+
+.WorkSide-tags {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.WorkSide-tag {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  font-family: 'Roboto', serif;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.WorkSide-description {
+  font-family: 'Gothic A1';
+  color: #d1d5db;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  font-size: 13px;
+  font-weight: 200;
+}
+
+/* 이미지 출력 영역 */
+.WorkSide-image-container {
+    flex: 1;
+    max-width: 48%;
+  }
+}
+
+
+
+
+
+
+
+.WorkSide-image-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.WorkSide-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 0.2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+
+
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+.footer .sns {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.footer .sns li a {
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+
+
+

@@ -1,12 +1,12 @@
 const projectData = {
   2025: [
-    { id: "Tanzania", genre: "Logo / Motion", img: "../Img/2025_Tanzania_Main.png" },
-    { id: "mg2025", genre: "Motion Graphics", img: "../Img/2025_KW_WD_MAIN.png" },
-    { id: "motion3d_1_2025", genre: "3D Motion", img: "../Img/2025_KW_3D_1_MAIN.png" },
-    { id: "ar2025", genre: "3D / AR", img: "../Img/2025_KW_3D_2_MAIN.png" },
-    { id: "interaction2025", genre: "3D Interaction", img: "../Img/2025_KW_CD_MAIN.png" },
-    { id: "typo2025", genre: "Typography Design", img: "../Img/2025_KW_VC_MAIN.png" },
-    { id: "projmap2025", genre: "Projection Mapping", img: "../Img/2025_KW_ID_MAIN.jpg" },
+    { id: "Tanzania", genre: "Logo / Motion", img: "Img/2025_Tanzania_Main.png" },
+    { id: "mg2025", genre: "Motion Graphics", img: "Img/2025_KW_WD_MAIN.png" },
+    { id: "motion3d_1_2025", genre: "3D Motion", img: "Img/2025_KW_3D_1_MAIN.png" },
+    { id: "ar2025", genre: "3D / AR", img: "Img/2025_KW_3D_2_MAIN.png" },
+    { id: "interaction2025", genre: "3D Interaction", img: "Img/2025_KW_CD_MAIN.png" },
+    { id: "typo2025", genre: "Typography Design", img: "Img/2025_KW_VC_MAIN.png" },
+    { id: "projmap2025", genre: "Projection Mapping", img: "Img/2025_KW_ID_MAIN.jpg" },
   ],
   2020: [
     { id: "vr2020", genre: "VR/AR", img: "img/vr2020.jpg" },
@@ -25,14 +25,14 @@ const projectData = {
     { id: "type2023", genre: "Typography", img: "img/type2023.jpg" },
   ],
   2024: [
-    { id: "logo2024", genre: "Logo", img: "../Img/2024_Lily_Logo_Main.jpg" },
-    { id: "cd1_2024", genre: "Content Design", img: "../Img/2024_KW_CD_1_MAIN.png" },
-    { id: "unity2024", genre: "Unity", img: "../img/2024_KW_UD_1_MAIN.png" },
-    { id: "vr2024", genre: "360 VR", img: "../Img/2024_KW_VR_MAIN.jpg" },
-    { id: "xr2024", genre: "XR", img: "../Img/2024_KW_XR_MAIN.png" },
-    { id: "cd2_2024", genre: "Content Design", img: "../Img/2024_KW_CD_MAIN.png" },
-    { id: "motion2024", genre: "3D Motion", img: "../Img/2024_KW_3D_MAIN.png" },
-    { id: "web2024", genre: "Website", img: "../Img/2024_KW_WS_MAIN.png" },
+    { id: "logo2024", genre: "Logo", img: "Img/2024_Lily_Logo_Main.jpg" },
+    { id: "cd1_2024", genre: "Content Design", img: "Img/2024_KW_CD_1_MAIN.png" },
+    { id: "unity2024", genre: "Unity", img: "img/2024_KW_UD_1_MAIN.png" },
+    { id: "vr2024", genre: "360 VR", img: "Img/2024_KW_VR_MAIN.jpg" },
+    { id: "xr2024", genre: "XR", img: "Img/2024_KW_XR_MAIN.png" },
+    { id: "cd2_2024", genre: "Content Design", img: "Img/2024_KW_CD_MAIN.png" },
+    { id: "motion2024", genre: "3D Motion", img: "Img/2024_KW_3D_MAIN.png" },
+    { id: "web2024", genre: "Website", img: "Img/2024_KW_WS_MAIN.png" },
   ],
 };
 
